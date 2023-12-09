@@ -29,6 +29,7 @@ flatpickr(dateInput, {
 
 function startTime() {
   startBtn.disabled = true;
+  dateInput.disabled = true;
   const endTime = selectedDatesValue.getTime();
   const currentTime = new Date().getTime();
   let remainingTime = endTime - currentTime;
@@ -51,6 +52,7 @@ function startTime() {
       date.minutes.textContent = '00';
       date.seconds.textContent = '00';
       startBtn.disabled = true;
+      dateInput.disabled = false;
       clearInterval(intervalId);
       iziToast.show({
         title: 'Time is up!',
