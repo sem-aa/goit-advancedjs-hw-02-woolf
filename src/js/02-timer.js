@@ -61,7 +61,7 @@ function startTime() {
   }
 
   if (!selectedDatesValue) {
-    console.log('Please choose a date first.');
+    iziToast.show({ message: 'Please choose a date first.' });
     return;
   }
 

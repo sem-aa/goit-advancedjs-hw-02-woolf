@@ -14,10 +14,8 @@ form.addEventListener('submit', e => {
   const amount = parseInt(inputAmount.value);
 
   for (let i = 0; i <= amount; i += 1) {
-    console.log(i, delay + i * step);
     createPromise(i, delay + i * step)
       .then(data => {
-        console.log(data);
         iziToast.show({
           title: `position ${data.position}`,
           message: `delay ${data.delay}`,
